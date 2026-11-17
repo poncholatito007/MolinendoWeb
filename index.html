@@ -286,7 +286,7 @@
             { id: 14, name: "Crostini de Tocino", cat: "Crostini", desc: "Tostadita especial con crema suave y trocitos de tocino.", options: [{u: 100, p: 70}, {u: 50, p: 40}, {u: 25, p: 28}], image: "img/Crostini/Crostini de tocino.png" },
 
             // 5. EMPANADAS
-           { id: 15, name: "Empanadas de Carne", cat: "Empanadas", desc: "Relleno criollo de carne picada sazonada con especias.", options: [{u: 100, p: 70}, {u: 50, p: 45}, {u: 25, p: 28}], image: "img/Empanadas/Empanadas de carne.png" },
+            { id: 15, name: "Empanadas de Carne", cat: "Empanadas", desc: "Relleno criollo de carne picada sazonada con especias.", options: [{u: 100, p: 70}, {u: 50, p: 45}, {u: 25, p: 28}], image: "img/Empanadas/Empanadas de carne.png" },
             { id: 16, name: "Empanadas de Pollo", cat: "Empanadas", desc: "Masa artesanal rellena de pollo guisado y sazonado en casa.", options: [{u: 100, p: 70}, {u: 50, p: 45}, {u: 25, p: 28}], image: "img/Empanadas/Empanadas de pollo.png" },
 
             // 6. PETIT SHOTS
@@ -586,11 +586,20 @@
 
             const grandTotal = cart.reduce((sum, item) => sum + (item.unitPrice * item.qty), 0);
 
-            let message = `*¡HOLA MOLINENDO! DESEO AGENDAR UN PEDIDO* 🪰🧁\n\n`;
-            message += `👤 *Cliente:* ${name}\n`;
-            message += `📅 *Fecha requerida:* ${date}\n`;
-            message += `🚗 *Modalidad:* ${method}\n`;
-            if (notes) message += `📝 *Indicaciones:* ${notes}\n`;
+            // Emojis en formato Unicode seguro
+            const eMosca = "\uD83E\uDEB0";      // 🪰
+            const eCupcake = "\uD83E\uDDC1";    // 🧁
+            const eUser = "\uD83D\uDC64";       // 👤
+            const eCal = "\uD83D\uDCC5";        // 📅
+            const eCar = "\uD83D\uDE97";        // 🚗
+            const eNote = "\uD83D\uDCDD";       // 📝
+            const eMoney = "\uD83D\uDCB0";      // 💰
+
+            let message = `*¡HOLA MOLINENDO! DESEO AGENDAR UN PEDIDO* ${eMosca}${eCupcake}\n\n`;
+            message += `${eUser} *Cliente:* ${name}\n`;
+            message += `${eCal} *Fecha requerida:* ${date}\n`;
+            message += `${eCar} *Modalidad:* ${method}\n`;
+            if (notes) message += `${eNote} *Indicaciones:* ${notes}\n`;
             message += `\n*RESUMEN DE PRODUCTOS:*\n`;
 
             cart.forEach((item, index) => {
@@ -599,11 +608,11 @@
                 message += `   Subtotal: S/ ${(item.unitPrice * item.qty).toFixed(2)}\n`;
             });
 
-            message += `\n💰 *TOTAL ESTIMADO: S/ ${grandTotal.toFixed(2)}*\n\n`;
+            message += `\n${eMoney} *TOTAL ESTIMADO: S/ ${grandTotal.toFixed(2)}*\n\n`;
             message += `Quedo a la espera de sus datos bancarios para realizar el abono y confirmar la reserva. ¡Muchas gracias!`;
 
             const phone = "51918464866";
-            const encodedUrl = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+            const encodedUrl = `https://api.whatsapp.com/send?phone=${phone}&text=${encodeURIComponent(message)}`;
             window.open(encodedUrl, '_blank');
         }
     </script>
