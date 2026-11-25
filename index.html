@@ -42,6 +42,13 @@
             background-size: 90px 90px;
         }
         h1, h2, h3, .font-serif { font-family: 'Cormorant Garamond', serif; }
+
+        /* Estilo tipográfico inspirado en el logo de Molinendo */
+        .logo-style-quote {
+            font-family: 'Cormorant Garamond', serif;
+            letter-spacing: 0.015em;
+            text-shadow: 0 1px 0 rgba(255, 255, 255, 0.85);
+        }
         
         /* Animación de partículas de libélulas flotando */
         @keyframes floatLibelula {
@@ -102,7 +109,7 @@
     <header class="sticky top-0 z-40 bg-brand-cream/90 backdrop-blur-md border-b border-brand-lavender transition-all">
         <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
             <a href="#" class="flex items-center gap-3 group">
-                <img src="img/Logo/Logo-moli.png" alt="Molinendo - Repostería y Catering" class="h-12 w-auto object-contain group-hover:scale-105 transition duration-300">
+                <img id="logo-header" src="img/Logo/Logo-moli.png" alt="Molinendo - Repostería y Catering" class="h-20 md:h-24 w-auto object-contain group-hover:scale-105 transition duration-300">
             </a>
 
             <div class="flex items-center gap-3">
@@ -130,7 +137,7 @@
             
             <div class="relative mb-3">
                 <div class="absolute -inset-4 bg-brand-glow/20 rounded-full blur-xl"></div>
-                <img src="img/Logo/Logo-moli.png" alt="Molinendo Logo Oficial Libélula" class="h-32 md:h-36 w-auto object-contain relative drop-shadow-md hover:rotate-1 transition duration-500">
+                <img id="logo-hero" src="img/Logo/Logo-moli.png" alt="Molinendo Logo Oficial Libélula" class="h-48 md:h-60 w-auto object-contain relative drop-shadow-md hover:rotate-1 transition duration-500">
             </div>
 
             <!-- Separador Decorativo estilo Libélula -->
@@ -152,6 +159,24 @@
                 <i data-lucide="clock" class="w-4 h-4 text-brand-accent"></i>
                 <span>Agendamos pedidos con <strong>48 a 72 horas</strong> de anticipación</span>
             </div>
+        </div>
+    </section>
+
+    <!-- APARTADO MOTIVADOR DE PASTELERÍA (ESTILO TIPOGRAFÍA DEL LOGO) -->
+    <section class="max-w-5xl mx-auto px-4 mt-8 relative z-10 w-full">
+        <div class="bg-gradient-to-r from-brand-pink/65 via-white/90 to-brand-lavender/55 rounded-2xl border border-brand-rose/40 px-6 py-6 sm:px-10 sm:py-7 text-center shadow-sm relative overflow-hidden">
+            <div class="flex items-center justify-center gap-2.5 mb-2">
+                <span class="h-[1px] w-8 bg-brand-rose/60"></span>
+                <svg class="w-4 h-4 text-brand-dark/80" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round">
+                    <path d="M16 7 L16 26"/><path d="M16 13 C9 7 2 9 2 13 C2 16 9 16 16 14"/><path d="M16 13 C23 7 30 9 30 13 C30 16 23 16 16 14"/><path d="M16 16 C10 15 5 17 6 21 C7 23 12 20 16 17"/><path d="M16 16 C22 15 27 17 26 21 C25 23 20 20 16 17"/>
+                </svg>
+                <span class="text-[11px] uppercase tracking-[0.22em] text-brand-accent font-semibold">Arte &amp; Dulzura</span>
+                <span class="h-[1px] w-8 bg-brand-rose/60"></span>
+            </div>
+
+            <p id="pastry-motivational-text" class="logo-style-quote text-2xl sm:text-3xl md:text-[2rem] italic font-semibold text-brand-dark leading-snug max-w-3xl mx-auto">
+                “Cada horneado es un abrazo dulce: cree en tus sueños, saborea cada instante y deja que lo artesanal endulce tu camino.”
+            </p>
         </div>
     </section>
 
@@ -194,7 +219,7 @@
             
             <!-- Encabezado decorativo del Footer -->
             <div class="flex flex-col items-center text-center mb-8">
-                <img src="img/Logo/Logo-moli.png" alt="Molinendo" class="h-14 w-auto object-contain mb-2">
+                <img id="logo-footer" src="img/Logo/Logo-moli.png" alt="Molinendo" class="h-24 md:h-28 w-auto object-contain mb-2">
                 <div class="flex items-center gap-3 text-brand-rose">
                     <div class="h-[1px] w-12 bg-brand-rose/40"></div>
                     <svg class="w-4 h-4 text-brand-accent" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
@@ -249,7 +274,7 @@
                 <!-- Encabezado del Carrito -->
                 <div class="p-4 bg-brand-pink border-b border-brand-lavender flex items-center justify-between">
                     <div class="flex items-center gap-2">
-                        <img src="img/Logo/Logo-moli.png" alt="Molinendo Logo" class="h-8 w-auto object-contain">
+                        <img id="logo-cart" src="img/Logo/Logo-moli.png" alt="Molinendo Logo" class="h-12 md:h-14 w-auto object-contain">
                         <h2 class="font-serif text-xl font-bold text-brand-dark">Resumen de Tu Pedido</h2>
                     </div>
                     <button onclick="toggleCart()" class="p-1.5 rounded-full hover:bg-white/60 text-gray-500">
@@ -422,6 +447,48 @@
 
     <!-- LÓGICA JAVASCRIPT Y BASE DE DATOS COMPLETA -->
     <script>
+        /* =====================================================================
+           APARTADO FÁCIL PARA MODIFICAR EL TAMAÑO DEL LOGO EN CADA UBICACIÓN
+           Usa clases de altura de Tailwind (ej: h-20, h-24, h-48, md:h-64...)
+           ===================================================================== */
+        const LOGO_SIZES = {
+            header: "h-20 md:h-24", // Barra superior fija
+            hero:   "h-48 md:h-60", // Sección principal / portada
+            footer: "h-24 md:h-28", // Pie de página
+            cart:   "h-12 md:h-14"  // Encabezado del resumen de pedido
+        };
+
+        /* =====================================================================
+           APARTADO FÁCIL PARA EDITAR EL MENSAJE MOTIVADOR DE PASTELERÍA
+           ===================================================================== */
+        const PASTRY_MOTIVATIONAL_MESSAGE = "“Cada horneado es un abrazo dulce: cree en tus sueños, saborea cada instante y deja que lo artesanal endulce tu camino.”";
+
+        function applyLogoSizes() {
+            const map = {
+                "logo-header": LOGO_SIZES.header,
+                "logo-hero":   LOGO_SIZES.hero,
+                "logo-footer": LOGO_SIZES.footer,
+                "logo-cart":   LOGO_SIZES.cart
+            };
+            Object.entries(map).forEach(([id, sizeClasses]) => {
+                const el = document.getElementById(id);
+                if (!el) return;
+                el.className = el.className
+                    .split(" ")
+                    .filter(cls => !/^(md:)?h-/.test(cls))
+                    .concat(sizeClasses.split(" "))
+                    .join(" ");
+            });
+        }
+
+        function applyMotivationalMessage() {
+            const quoteEl = document.getElementById("pastry-motivational-text");
+            if (quoteEl && PASTRY_MOTIVATIONAL_MESSAGE) {
+                quoteEl.textContent = PASTRY_MOTIVATIONAL_MESSAGE;
+            }
+        }
+        /* ===================================================================== */
+
         const productsData = [
             // 1. BROUNIES Y BLONDIES
             { id: 1, name: "Alfajor de Cookies Chips", cat: "Brounies y blondies", desc: "Galletas artesanales con chispas de chocolate rellenas de manjar.", options: [{u: 100, p: 75}, {u: 50, p: 42}, {u: 25, p: 26}], image: "img/Brounies y blondies/Alfajor de cookies chips.png" },
@@ -501,6 +568,9 @@
         let toastTimeout;
 
         document.addEventListener('DOMContentLoaded', () => {
+            applyLogoSizes();
+            applyMotivationalMessage();
+
             productsData.forEach(p => {
                 selectedOptionsState[p.id] = {
                     units: p.options[0].u,
