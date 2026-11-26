@@ -1,0 +1,1079 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Molinendo | Repostería y Catering 2026</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            pink: '#ddd3d3',
+                            lavender: '#c9c2c2',
+                            cream: '#f4f1ef',
+                            rose: '#b38865',
+                            dark: '#08202c',
+                            accent: '#214e63',
+                            glow: '#b38865'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['Cormorant Garamond', 'serif'],
+                        sans: ['Plus Jakarta Sans', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body { 
+            font-family: 'Plus Jakarta Sans', sans-serif; 
+            background-color: #f4f1ef; 
+            /* Patrón de pequeñas libélulas vectoriales sutiles en tono bronce (#b38865) */
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='90' height='90' viewBox='0 0 90 90'%3E%3Cg fill='none' stroke='%23b38865' stroke-width='1.1' stroke-linecap='round' stroke-linejoin='round' opacity='0.28'%3E%3Cg transform='translate(22, 22) rotate(-22)'%3E%3Cpath d='M0 -7 L0 9'/%3E%3Cpath d='M0 -2 C-6 -7 -13 -6 -13 -2 C-13 1 -6 1 0 -1'/%3E%3Cpath d='M0 -2 C6 -7 13 -6 13 -2 C13 1 6 1 0 -1'/%3E%3Cpath d='M0 1 C-5 0 -10 2 -9 5 C-8 7 -3 5 0 2'/%3E%3Cpath d='M0 1 C5 0 10 2 9 5 C8 7 3 5 0 2'/%3E%3C/g%3E%3Cg transform='translate(67, 67) rotate(18)'%3E%3Cpath d='M0 -6 L0 8'/%3E%3Cpath d='M0 -2 C-5 -6 -11 -5 -11 -2 C-11 1 -5 1 0 -1'/%3E%3Cpath d='M0 -2 C5 -6 11 -5 11 -2 C11 1 5 1 0 -1'/%3E%3Cpath d='M0 1 C-4 0 -8 2 -7 4 C-6 6 -2 4 0 2'/%3E%3Cpath d='M0 1 C4 0 8 2 7 4 C6 6 2 4 0 2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            background-size: 90px 90px;
+        }
+        h1, h2, h3, .font-serif { font-family: 'Cormorant Garamond', serif; }
+
+        .logo-style-quote {
+            font-family: 'Cormorant Garamond', serif;
+            letter-spacing: 0.015em;
+            text-shadow: 0 1px 0 rgba(221, 221, 211, 0.75);
+        }
+        
+        @keyframes floatLibelula {
+            0% { transform: translateY(0px) rotate(0deg); opacity: 0.25; }
+            50% { transform: translateY(-15px) rotate(4deg); opacity: 0.55; }
+            100% { transform: translateY(0px) rotate(0deg); opacity: 0.25; }
+        }
+        .libelula-particle {
+            animation: floatLibelula 6s ease-in-out infinite;
+        }
+
+        .portion-btn.active, .payment-btn.active {
+            background-color: #08202c;
+            color: #ddd3d3;
+            border-color: #b38865;
+            box-shadow: 0 4px 12px rgba(8, 32, 44, 0.25);
+        }
+
+        .main-box-card {
+            transition: all 0.28s ease;
+        }
+        .main-box-card.active {
+            background: linear-gradient(135deg, #08202c 0%, #214e63 100%);
+            color: #ddd3d3;
+            border-color: #b38865;
+            box-shadow: 0 14px 28px -8px rgba(8, 32, 44, 0.4);
+            transform: translateY(-3px);
+        }
+        .main-box-card.active .box-subtitle {
+            color: #ddd3d3;
+        }
+        .main-box-card.active .box-pill {
+            background-color: rgba(179, 136, 101, 0.22);
+            color: #ddd3d3;
+            border-color: rgba(179, 136, 101, 0.55);
+        }
+
+        .card-dragonfly-hover:hover {
+            box-shadow: 0 10px 30px -5px rgba(33, 78, 99, 0.25);
+            border-color: #b38865;
+        }
+    </style>
+</head>
+<body class="text-brand-dark antialiased relative overflow-x-hidden flex flex-col min-h-screen">
+
+    <!-- LIBÉLULAS FLOTANTES DECORATIVAS -->
+    <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden opacity-35">
+        <svg class="absolute top-12 left-6 w-10 h-10 text-brand-rose libelula-particle" style="animation-delay: 0s;" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round">
+            <path d="M16 7 L16 26"/><path d="M16 13 C9 7 2 9 2 13 C2 16 9 16 16 14"/><path d="M16 13 C23 7 30 9 30 13 C30 16 23 16 16 14"/><path d="M16 16 C10 15 5 17 6 21 C7 23 12 20 16 17"/><path d="M16 16 C22 15 27 17 26 21 C25 23 20 20 16 17"/>
+        </svg>
+        <svg class="absolute top-1/3 right-10 w-12 h-12 text-brand-accent libelula-particle" style="animation-delay: 2s;" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round">
+            <path d="M16 7 L16 26"/><path d="M16 13 C9 7 2 9 2 13 C2 16 9 16 16 14"/><path d="M16 13 C23 7 30 9 30 13 C30 16 23 16 16 14"/><path d="M16 16 C10 15 5 17 6 21 C7 23 12 20 16 17"/><path d="M16 16 C22 15 27 17 26 21 C25 23 20 20 16 17"/>
+        </svg>
+        <svg class="absolute bottom-1/4 left-12 w-9 h-9 text-brand-rose libelula-particle" style="animation-delay: 4s;" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round">
+            <path d="M16 7 L16 26"/><path d="M16 13 C9 7 2 9 2 13 C2 16 9 16 16 14"/><path d="M16 13 C23 7 30 9 30 13 C30 16 23 16 16 14"/><path d="M16 16 C10 15 5 17 6 21 C7 23 12 20 16 17"/><path d="M16 16 C22 15 27 17 26 21 C25 23 20 20 16 17"/>
+        </svg>
+        <svg class="absolute bottom-12 right-1/4 w-11 h-11 text-brand-accent libelula-particle" style="animation-delay: 1s;" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round">
+            <path d="M16 7 L16 26"/><path d="M16 13 C9 7 2 9 2 13 C2 16 9 16 16 14"/><path d="M16 13 C23 7 30 9 30 13 C30 16 23 16 16 14"/><path d="M16 16 C10 15 5 17 6 21 C7 23 12 20 16 17"/><path d="M16 16 C22 15 27 17 26 21 C25 23 20 20 16 17"/>
+        </svg>
+    </div>
+
+    <!-- NOTIFICACIÓN SUTIL AL AGREGAR PRODUCTO -->
+    <div id="toast-notification" class="fixed bottom-20 sm:bottom-6 left-1/2 -translate-x-1/2 z-40 bg-brand-dark text-brand-pink px-4 py-2.5 rounded-full shadow-xl border border-brand-rose/60 text-xs font-medium flex items-center gap-2 transition-all duration-300 opacity-0 pointer-events-none translate-y-3">
+        <span class="text-brand-rose">✨</span>
+        <span id="toast-text">Producto agregado al pedido</span>
+    </div>
+
+    <!-- BARRA SUPERIOR DE BIENVENIDA -->
+    <div class="bg-brand-dark text-brand-pink text-xs text-center py-2.5 px-4 tracking-wider font-medium flex flex-wrap justify-center items-center gap-2 relative z-10 shadow-sm">
+        <span class="text-brand-rose">✨</span>
+        <span>Bienvenido a la página oficial de <strong class="text-white">Molinendo</strong></span>
+        <span class="hidden sm:inline text-brand-rose">•</span>
+        <span class="text-brand-pink/90 font-normal">Endulzando tus celebraciones con sabor artesanal y detalle en cada bocado</span>
+    </div>
+
+    <!-- ENCABEZADO ESTÁTICO SUPERIOR -->
+    <header class="sticky top-0 z-40 bg-brand-cream/95 backdrop-blur-md border-b border-brand-lavender transition-all">
+        <div class="max-w-6xl mx-auto px-3 sm:px-4 py-2.5 flex items-center justify-between gap-2">
+            <a href="#" class="flex items-center gap-2 group shrink-0">
+                <img id="logo-header" src="img/Logo/Logo-moli.png" alt="Molinendo - Repostería y Catering" class="h-14 sm:h-20 md:h-24 w-auto object-contain group-hover:scale-105 transition duration-300">
+            </a>
+
+            <div class="flex items-center gap-2 sm:gap-3">
+                <a href="https://www.instagram.com/molinendo_/" target="_blank" rel="noopener noreferrer" aria-label="Instagram de Molinendo" class="flex items-center gap-1.5 text-[11px] sm:text-xs text-brand-dark hover:text-brand-accent transition font-medium px-2.5 sm:px-3.5 py-1.5 rounded-full border border-brand-rose/60 bg-white shadow-sm whitespace-nowrap">
+                    <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 text-brand-rose shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                        <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
+                    </svg>
+                    <span>@molinendo_</span>
+                </a>
+
+                <button type="button" onclick="toggleCart()" aria-label="Abrir resumen de pedido" class="relative bg-brand-dark text-brand-pink p-2.5 rounded-full shadow-md hover:bg-brand-accent transition transform active:scale-95 shrink-0 border border-brand-rose/40">
+                    <i data-lucide="shopping-bag" class="w-5 h-5"></i>
+                    <span id="cart-badge" class="absolute -top-1 -right-1 bg-brand-rose text-brand-dark font-bold text-[10px] w-5 h-5 rounded-full flex items-center justify-center hidden border-2 border-white shadow">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- SECCIÓN PRINCIPAL -->
+    <section class="relative bg-gradient-to-b from-brand-pink/80 via-brand-pink/35 to-transparent py-14 px-4 text-center border-b border-brand-lavender/70 z-10 overflow-hidden">
+        <div class="max-w-3xl mx-auto flex flex-col items-center relative">
+            <div class="relative mb-3">
+                <div class="absolute -inset-4 bg-brand-accent/15 rounded-full blur-xl"></div>
+                <img id="logo-hero" src="img/Logo/Logo-moli.png" alt="Molinendo Logo Oficial Libélula" class="h-48 md:h-60 w-auto object-contain relative drop-shadow-md hover:rotate-1 transition duration-500">
+            </div>
+
+            <div class="flex items-center gap-3 my-2 text-brand-rose">
+                <div class="h-[1px] w-12 bg-brand-rose/50"></div>
+                <svg class="w-4 h-4 text-brand-accent" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+                    <path d="M16 7 L16 26"/><path d="M16 13 C9 7 2 9 2 13 C2 16 9 16 16 14"/><path d="M16 13 C23 7 30 9 30 13 C30 16 23 16 16 14"/><path d="M16 16 C10 15 5 17 6 21 C7 23 12 20 16 17"/><path d="M16 16 C22 15 27 17 26 21 C25 23 20 20 16 17"/>
+                </svg>
+                <div class="h-[1px] w-12 bg-brand-rose/50"></div>
+            </div>
+            
+            <span class="text-xs uppercase tracking-widest text-brand-accent font-semibold mb-1 block">Menú Oficial de Bocaditos 2026</span>
+            <h1 class="text-4xl md:text-5xl font-bold mb-3 font-serif text-brand-dark">Carta de Bocaditos Dulces, Salados &amp; Tortas</h1>
+            <p class="text-brand-accent text-sm md:text-base max-w-xl mx-auto mb-6 leading-relaxed">
+                Repostería artesanal y servicio de catering diseñado con elegancia para tus momentos especiales.
+            </p>
+            
+            <div class="inline-flex items-center gap-2 bg-white/95 backdrop-blur-sm px-5 py-2.5 rounded-full shadow-sm text-xs border border-brand-rose/50 text-brand-dark">
+                <i data-lucide="clock" class="w-4 h-4 text-brand-rose"></i>
+                <span>Agendamos pedidos con <strong>48 a 72 horas</strong> de anticipación</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- APARTADO MOTIVADOR DE PASTELERÍA -->
+    <section class="max-w-5xl mx-auto px-4 mt-8 relative z-10 w-full">
+        <div class="bg-gradient-to-r from-brand-pink/75 via-white/95 to-brand-lavender/65 rounded-2xl border border-brand-rose/50 px-6 py-6 sm:px-10 sm:py-7 text-center shadow-sm relative overflow-hidden">
+            <div class="flex items-center justify-center gap-2.5 mb-2">
+                <span class="h-[1px] w-8 bg-brand-rose"></span>
+                <svg class="w-4 h-4 text-brand-dark" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round">
+                    <path d="M16 7 L16 26"/><path d="M16 13 C9 7 2 9 2 13 C2 16 9 16 16 14"/><path d="M16 13 C23 7 30 9 30 13 C30 16 23 16 16 14"/><path d="M16 16 C10 15 5 17 6 21 C7 23 12 20 16 17"/><path d="M16 16 C22 15 27 17 26 21 C25 23 20 20 16 17"/>
+                </svg>
+                <span class="text-[11px] uppercase tracking-[0.22em] text-brand-accent font-semibold">Arte &amp; Dulzura</span>
+                <span class="h-[1px] w-8 bg-brand-rose"></span>
+            </div>
+
+            <p id="pastry-motivational-text" class="logo-style-quote text-2xl sm:text-3xl md:text-[2rem] italic font-semibold text-brand-dark leading-snug max-w-3xl mx-auto">
+                “Cada horneado es un abrazo dulce: cree en tus sueños, saborea cada instante y deja que lo artesanal endulce tu camino.”
+            </p>
+        </div>
+    </section>
+
+    <!-- BUSCADOR + 3 CUADROS GRANDES + SUBCATEGORÍAS DENTRO DE CADA CUADRO -->
+    <section class="max-w-6xl mx-auto px-4 mt-8 relative z-10 w-full space-y-6">
+        <div class="relative w-full max-w-md">
+            <i data-lucide="search" class="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-brand-accent"></i>
+            <input type="text" id="search-input" onkeyup="filterProducts()" placeholder="Buscar alfajor, brownie, canapé, torta..." class="w-full pl-10 pr-4 py-2.5 text-sm rounded-full border border-brand-lavender focus:outline-none focus:border-brand-rose bg-white/95 text-brand-dark shadow-sm transition">
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-5" id="main-group-boxes">
+            <button type="button" onclick="selectMainGroup('dulces')" data-group="dulces" class="main-box-card active text-left bg-white/95 p-6 rounded-2xl border-2 border-brand-rose/70 shadow-sm flex flex-col justify-between gap-4 cursor-pointer">
+                <div class="flex items-start justify-between gap-3">
+                    <span class="text-3xl bg-brand-pink text-brand-dark w-12 h-12 rounded-2xl flex items-center justify-center shrink-0 border border-brand-rose/40">🧁</span>
+                    <span class="box-pill text-[11px] font-semibold px-3 py-1 rounded-full bg-brand-pink text-brand-dark border border-brand-rose/40">1º Selección</span>
+                </div>
+                <div>
+                    <h2 class="font-serif text-2xl sm:text-3xl font-bold leading-tight mb-1">Bocaditos Dulces</h2>
+                    <p class="box-subtitle text-xs text-brand-accent leading-relaxed">
+                        Brownies, blondies, alfajores, petit shots, pyes, trufas y brigadeiros artesanales.
+                    </p>
+                </div>
+                <div class="text-xs font-semibold flex items-center gap-1.5 text-brand-rose">
+                    <span>Ver dulces y subcategorías</span>
+                    <i data-lucide="chevron-down" class="w-4 h-4"></i>
+                </div>
+            </button>
+
+            <button type="button" onclick="selectMainGroup('salados')" data-group="salados" class="main-box-card text-left bg-white/95 p-6 rounded-2xl border-2 border-brand-lavender hover:border-brand-rose shadow-sm flex flex-col justify-between gap-4 cursor-pointer">
+                <div class="flex items-start justify-between gap-3">
+                    <span class="text-3xl bg-brand-pink text-brand-dark w-12 h-12 rounded-2xl flex items-center justify-center shrink-0 border border-brand-rose/40">🥟</span>
+                    <span class="box-pill text-[11px] font-semibold px-3 py-1 rounded-full bg-brand-pink text-brand-dark border border-brand-rose/40">2º Selección</span>
+                </div>
+                <div>
+                    <h2 class="font-serif text-2xl sm:text-3xl font-bold leading-tight mb-1">Bocaditos Salados</h2>
+                    <p class="box-subtitle text-xs text-brand-accent leading-relaxed">
+                        Canapés, charcutería, crostini, empanadas, piezas de pollo, rolls, sabores internacionales y sandwiches.
+                    </p>
+                </div>
+                <div class="text-xs font-semibold flex items-center gap-1.5 text-brand-accent">
+                    <span>Ver salados y subcategorías</span>
+                    <i data-lucide="chevron-down" class="w-4 h-4"></i>
+                </div>
+            </button>
+
+            <button type="button" onclick="selectMainGroup('tortas')" data-group="tortas" class="main-box-card text-left bg-white/95 p-6 rounded-2xl border-2 border-brand-lavender hover:border-brand-rose shadow-sm flex flex-col justify-between gap-4 cursor-pointer">
+                <div class="flex items-start justify-between gap-3">
+                    <span class="text-3xl bg-brand-pink text-brand-dark w-12 h-12 rounded-2xl flex items-center justify-center shrink-0 border border-brand-rose/40">🎂</span>
+                    <span class="box-pill text-[11px] font-semibold px-3 py-1 rounded-full bg-brand-pink text-brand-dark border border-brand-rose/40">3º Selección</span>
+                </div>
+                <div>
+                    <h2 class="font-serif text-2xl sm:text-3xl font-bold leading-tight mb-1">Tortas, Postres y Personalizado</h2>
+                    <p class="box-subtitle text-xs text-brand-accent leading-relaxed">
+                        Tortas temáticas, elegantes, infantiles y pasteles personalizados con diseño artesanal.
+                    </p>
+                </div>
+                <div class="text-xs font-semibold flex items-center gap-1.5 text-brand-accent">
+                    <span>Ver tortas y subcategorías</span>
+                    <i data-lucide="chevron-down" class="w-4 h-4"></i>
+                </div>
+            </button>
+        </div>
+
+        <div id="active-group-subcategories" class="bg-white/95 rounded-2xl border border-brand-lavender p-4 sm:p-5 shadow-sm">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
+                <div class="flex items-center gap-2">
+                    <span class="text-xs uppercase tracking-wider font-bold text-brand-accent" id="active-group-title">Bocaditos Dulces</span>
+                    <span class="text-[11px] text-brand-rose font-medium">• Filtra por subcategoría:</span>
+                </div>
+            </div>
+            <div id="subcategories-bar" class="flex items-center gap-2 flex-wrap"></div>
+        </div>
+    </section>
+
+    <!-- GRILLA DE PRODUCTOS -->
+    <main class="max-w-6xl mx-auto px-4 py-8 relative z-10 flex-1 w-full">
+        <div id="products-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+    </main>
+
+    <!-- PIE DE PÁGINA CON POLÍTICA PARA AGENDAR PEDIDO -->
+    <footer class="bg-white/95 border-t border-brand-lavender mt-12 relative z-10 pb-24 sm:pb-12">
+        <div class="max-w-6xl mx-auto px-4 py-12">
+            <div class="flex flex-col items-center text-center mb-8">
+                <img id="logo-footer" src="img/Logo/Logo-moli.png" alt="Molinendo" class="h-24 md:h-28 w-auto object-contain mb-2">
+                <div class="flex items-center gap-3 text-brand-rose">
+                    <div class="h-[1px] w-12 bg-brand-rose/50"></div>
+                    <svg class="w-4 h-4 text-brand-accent" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+                        <path d="M16 7 L16 26"/><path d="M16 13 C9 7 2 9 2 13 C2 16 9 16 16 14"/><path d="M16 13 C23 7 30 9 30 13 C30 16 23 16 16 14"/><path d="M16 16 C10 15 5 17 6 21 C7 23 12 20 16 17"/><path d="M16 16 C22 15 27 17 26 21 C25 23 20 20 16 17"/>
+                    </svg>
+                    <div class="h-[1px] w-12 bg-brand-rose/50"></div>
+                </div>
+            </div>
+
+            <div class="max-w-2xl mx-auto">
+                <div class="bg-brand-pink/55 p-6 sm:p-8 rounded-2xl border border-brand-rose/50 shadow-sm text-center">
+                    <div class="flex items-center justify-center gap-2.5 mb-3">
+                        <span class="w-2.5 h-2.5 rounded-full bg-brand-dark shrink-0"></span>
+                        <h3 class="font-serif text-2xl font-bold text-brand-dark">Políticas para agendar pedido</h3>
+                    </div>
+                    <p class="text-xs sm:text-sm text-brand-dark/90 leading-relaxed">
+                        Para agendar su pedido es requisito que se realice el abono del <strong>50% del monto total</strong>, al momento de realizar el contrato, el cual puede ser verbal o escrito; y, se abonará el <strong>50% restante</strong> el día de la entrega del producto. Cabe resaltar que la existencia del voucher de depósito es la manifestación voluntaria expresa del acuerdo y conformidad entre las partes.
+                    </p>
+                </div>
+            </div>
+
+            <div class="mt-10 pt-6 border-t border-brand-lavender flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-brand-accent">
+                <p>© 2026 <strong class="text-brand-dark">Molinendo</strong> — Repostería y Catering. Todos los derechos reservados.</p>
+                <div class="flex items-center gap-4">
+                    <span>📍 Av. Túpac Amaru 450</span>
+                    <a href="https://www.instagram.com/molinendo_/" target="_blank" rel="noopener noreferrer" class="text-brand-rose hover:text-brand-dark hover:underline font-semibold">@molinendo_</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- BOTÓN FLOTANTE EN MÓVILES -->
+    <div id="floating-cart-btn" class="fixed bottom-4 right-4 z-30 sm:hidden hidden">
+        <button type="button" onclick="toggleCart()" class="bg-brand-dark text-brand-pink px-5 py-3 rounded-full shadow-2xl flex items-center gap-3 border-2 border-brand-rose">
+            <div class="relative">
+                <i data-lucide="shopping-bag" class="w-5 h-5"></i>
+                <span id="mobile-cart-badge" class="absolute -top-2 -right-2 bg-brand-rose text-brand-dark font-bold text-[10px] w-4 h-4 rounded-full flex items-center justify-center">0</span>
+            </div>
+            <span class="text-sm font-semibold">Ver Pedido</span>
+            <span id="mobile-cart-total" class="font-bold text-brand-glow text-sm">S/ 0.00</span>
+        </button>
+    </div>
+
+    <!-- PANEL LATERAL DEL CARRITO -->
+    <div id="cart-drawer" class="fixed inset-0 z-50 overflow-hidden hidden">
+        <div class="absolute inset-0 bg-brand-dark/50 backdrop-blur-sm transition-opacity" onclick="toggleCart()"></div>
+        <div class="fixed inset-y-0 right-0 max-w-full flex pl-2 sm:pl-10">
+            <div class="w-screen max-w-md sm:max-w-3xl bg-white shadow-2xl flex flex-col relative h-full border-l border-brand-rose/40">
+                
+                <!-- Encabezado del Carrito -->
+                <div class="p-4 bg-brand-pink border-b border-brand-lavender flex items-center justify-between shrink-0">
+                    <div class="flex items-center gap-2.5">
+                        <img id="logo-cart" src="img/Logo/Logo-moli.png" alt="Molinendo Logo" class="h-11 sm:h-12 w-auto object-contain">
+                        <div>
+                            <h2 class="font-serif text-xl font-bold text-brand-dark leading-none">Resumen de Tu Pedido</h2>
+                            <span class="text-[11px] text-brand-accent font-medium">Revisa tus bocaditos y completa tus datos</span>
+                        </div>
+                    </div>
+                    <button type="button" onclick="toggleCart()" class="p-1.5 rounded-full hover:bg-white/70 text-brand-dark transition">
+                        <i data-lucide="x" class="w-5 h-5"></i>
+                    </button>
+                </div>
+
+                <!-- CUERPO MITAD Y MITAD: IZQUIERDA PEDIDOS / DERECHA DATOS PARA AGENDAR -->
+                <div class="flex-1 min-h-0 grid grid-cols-1 sm:grid-cols-2 divide-y sm:divide-y-0 sm:divide-x divide-brand-lavender overflow-y-auto sm:overflow-hidden">
+                    
+                    <!-- MITAD 1: Lista de Productos Agregados -->
+                    <div class="p-4 overflow-y-auto space-y-3 bg-white sm:h-full">
+                        <div class="flex items-center justify-between border-b border-brand-pink pb-2">
+                            <h3 class="font-bold text-brand-accent uppercase tracking-wider text-[11px] flex items-center gap-1">
+                                <span>🧁</span> Productos Seleccionados
+                            </h3>
+                            <span id="cart-items-count-label" class="text-[11px] text-brand-rose font-semibold">0 ítems</span>
+                        </div>
+                        <div id="cart-items-container" class="space-y-3"></div>
+                    </div>
+
+                    <!-- MITAD 2: Formulario de Pedido -->
+                    <div class="p-4 border-t sm:border-t-0 border-brand-lavender bg-brand-pink/40 space-y-3 text-xs overflow-y-auto sm:h-full">
+                        <h3 class="font-bold text-brand-accent uppercase tracking-wider text-[11px] flex items-center gap-1">
+                            <span>✨</span> Datos para Agendar
+                        </h3>
+                        
+                        <div>
+                            <label class="block text-brand-dark mb-1 font-medium">Nombre y Apellido *</label>
+                            <input type="text" id="customer-name" placeholder="Ej. María García" class="w-full px-3 py-2 rounded-lg border border-brand-lavender focus:outline-none focus:border-brand-rose bg-white text-brand-dark">
+                        </div>
+
+                        <!-- FECHA Y HORA CON RELOJ Y SELECTOR AM / PM -->
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                            <div>
+                                <label class="block text-brand-dark mb-1 font-medium">Fecha requerida *</label>
+                                <input type="date" id="delivery-date" class="w-full px-2.5 py-2 rounded-lg border border-brand-lavender focus:outline-none focus:border-brand-rose bg-white text-brand-dark">
+                            </div>
+                            <div>
+                                <label class="block text-brand-dark mb-1 font-medium flex items-center gap-1">
+                                    <i data-lucide="clock" class="w-3.5 h-3.5 text-brand-rose shrink-0"></i>
+                                    <span>Hora requerida *</span>
+                                </label>
+                                <div class="grid grid-cols-[1fr_auto] gap-1.5 items-center">
+                                    <input type="time" id="delivery-time" value="04:00" class="w-full min-w-0 px-2 py-2 rounded-lg border border-brand-lavender focus:outline-none focus:border-brand-rose bg-white text-brand-dark text-xs">
+                                    <select id="delivery-period" class="min-w-[68px] px-2 py-2 rounded-lg border border-brand-lavender focus:outline-none focus:border-brand-rose bg-white font-semibold text-brand-dark text-xs">
+                                        <option value="AM">AM</option>
+                                        <option value="PM" selected>PM</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-brand-dark mb-1 font-medium">Modalidad *</label>
+                            <select id="delivery-method" onchange="handleDeliveryMethodChange()" class="w-full px-3 py-2 rounded-lg border border-brand-lavender focus:outline-none focus:border-brand-rose bg-white text-brand-dark">
+                                <option value="Retiro en Local">Retiro en Local (Gratis)</option>
+                                <option value="Delivery">Delivery (Sujeto a costo)</option>
+                            </select>
+                        </div>
+
+                        <!-- OPCIÓN CUANDO SE SELECCIONA RETIRO EN LOCAL -->
+                        <div id="local-pickup-box" class="bg-white/95 p-3 rounded-xl border border-brand-rose/60 space-y-2 shadow-xs">
+                            <p class="text-xs font-semibold text-brand-dark flex items-center gap-1.5">
+                                <span>📍 Av. Túpac Amaru 450</span>
+                            </p>
+                            <p class="text-[11px] text-brand-accent leading-snug">
+                                Recojo directo en nuestro local sin costo adicional.
+                            </p>
+                            <a href="https://www.google.com/maps/search/?api=1&query=Av.+Tupac+Amaru+450" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-[11px] font-semibold text-brand-accent hover:text-brand-dark underline">
+                                <i data-lucide="map-pin" class="w-3.5 h-3.5 shrink-0 text-brand-rose"></i>
+                                <span>Ver referencia en Google Maps (Av. Túpac Amaru 450)</span>
+                            </a>
+                        </div>
+
+                        <!-- OPCIÓN CUANDO SE SELECCIONA DELIVERY (OCULTA POR DEFECTO) -->
+                        <div id="delivery-address-box" class="hidden">
+                            <label class="block text-brand-dark mb-1 font-medium flex items-center gap-1">
+                                <i data-lucide="map-pin" class="w-3.5 h-3.5 text-brand-rose shrink-0"></i>
+                                <span>Dirección de entrega (Delivery) *</span>
+                            </label>
+                            <input type="text" id="delivery-address" placeholder="Ej. Jr. Bolívar 420, Bambamarca" class="w-full px-3 py-2 rounded-lg border border-brand-lavender focus:outline-none focus:border-brand-rose bg-white text-brand-dark">
+                        </div>
+
+                        <!-- SELECTOR DE MÉTODO DE PAGO -->
+                        <div>
+                            <label class="block text-brand-dark mb-1.5 font-medium">Método de pago (Abono 50%) *</label>
+                            <div class="grid grid-cols-3 gap-2">
+                                <button type="button" onclick="selectPaymentMethod('Yape')" data-pay="Yape" class="payment-btn active bg-white border border-brand-lavender rounded-xl p-2 flex flex-col items-center justify-center gap-1 transition hover:border-brand-rose">
+                                    <img src="img/Metodos%20de%20Pago/Yape.png" alt="Yape" class="h-6 w-auto object-contain bg-white rounded px-1">
+                                    <span class="text-[11px] font-semibold">Yape</span>
+                                </button>
+                                <button type="button" onclick="selectPaymentMethod('BCP')" data-pay="BCP" class="payment-btn bg-white text-brand-dark border border-brand-lavender rounded-xl p-2 flex flex-col items-center justify-center gap-1 transition hover:border-brand-rose">
+                                    <img src="img/Metodos%20de%20Pago/BCP.png" alt="BCP" class="h-6 w-auto object-contain bg-white rounded px-1">
+                                    <span class="text-[11px] font-semibold">BCP</span>
+                                </button>
+                                <button type="button" onclick="selectPaymentMethod('Banco de la Nación')" data-pay="Banco de la Nación" class="payment-btn bg-white text-brand-dark border border-brand-lavender rounded-xl p-2 flex flex-col items-center justify-center gap-1 transition hover:border-brand-rose">
+                                    <img src="img/Metodos%20de%20Pago/Banco%20de%20la%20naci%C3%B3n.png" alt="Banco de la Nación" class="h-6 w-auto object-contain bg-white rounded px-1">
+                                    <span class="text-[10px] font-semibold leading-tight text-center">Banco de la Nación</span>
+                                </button>
+                            </div>
+                            <p class="text-[10px] text-brand-accent mt-1.5 bg-white/90 px-2.5 py-1.5 rounded-lg border border-brand-lavender">
+                                Titular de cuenta: <strong class="text-brand-dark">Vivian Mishel Chugden Mori</strong>
+                            </p>
+                        </div>
+
+                        <div>
+                            <label class="block text-brand-dark mb-1 font-medium">Notas o Indicaciones adicionales</label>
+                            <textarea id="order-notes" rows="2" placeholder="Ej. Presentación especial, referencia de entrega, etc." class="w-full px-3 py-2 rounded-lg border border-brand-lavender focus:outline-none focus:border-brand-rose bg-white text-brand-dark"></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pie del Carrito -->
+                <div class="p-4 border-t border-brand-lavender bg-white space-y-2.5 shrink-0">
+                    <div class="flex justify-between items-center text-lg font-bold">
+                        <span class="text-brand-dark">Total estimado:</span>
+                        <span id="cart-total" class="text-brand-rose font-serif text-2xl">S/ 0.00</span>
+                    </div>
+
+                    <p class="text-[11px] text-brand-accent text-center leading-tight">
+                        Al presionar el botón podrás revisar nuestros datos de entrega antes de ir a WhatsApp.
+                    </p>
+
+                    <button type="button" onclick="openPoliciesNotice()" class="w-full bg-brand-dark hover:bg-brand-accent text-brand-pink font-semibold py-3 px-4 rounded-xl shadow-lg flex items-center justify-center gap-2 transition transform active:scale-98 border border-brand-rose/50">
+                        <i data-lucide="message-circle" class="w-5 h-5 text-brand-rose"></i>
+                        <span>Enviar Pedido a WhatsApp</span>
+                    </button>
+                </div>
+
+                <!-- AVISO / ANUNCIO DE DATOS DE ENTREGA DENTRO DEL RECUADRO DEL PEDIDO -->
+                <div id="policies-notice-modal" class="absolute inset-0 z-20 bg-brand-dark/60 backdrop-blur-xs flex items-center justify-center p-4 hidden">
+                    <div class="bg-white rounded-2xl border border-brand-rose/60 shadow-2xl w-full max-w-lg max-h-[90vh] flex flex-col overflow-hidden">
+                        <div class="p-4 bg-brand-pink border-b border-brand-lavender flex items-center justify-between">
+                            <div class="flex items-center gap-2">
+                                <span class="text-brand-rose">📋</span>
+                                <h3 class="font-serif text-lg font-bold text-brand-dark">Aviso Importante antes de Enviar</h3>
+                            </div>
+                            <button type="button" onclick="closePoliciesNotice()" class="p-1 rounded-full hover:bg-white/70 text-brand-dark">
+                                <i data-lucide="x" class="w-4 h-4"></i>
+                            </button>
+                        </div>
+
+                        <div class="p-4 overflow-y-auto space-y-4 text-xs text-brand-dark/90">
+                            <div class="bg-brand-pink/45 p-3.5 rounded-xl border border-brand-lavender">
+                                <div class="flex items-center gap-2 mb-1.5">
+                                    <span class="w-2 h-2 rounded-full bg-brand-rose shrink-0"></span>
+                                    <h4 class="font-serif text-lg font-bold text-brand-dark">Datos de entrega</h4>
+                                </div>
+                                <p class="leading-relaxed">
+                                    Las entregas de los productos no se realizan por servicio de Delivery, salvo en el caso de detalles por ocasión especial. Por ello, el precio final acordado no incluye el costo del delivery. En caso el cliente desee que su pedido sea enviado por este medio, el tiempo estimado de entrega será de <strong>20 a 30 minutos</strong>, y el costo del servicio debe ser asumido por el consumidor, no por la empresa.
+                                </p>
+                                <p class="mt-2 font-semibold text-brand-dark">
+                                    Punto de recojo en local: 📍 Av. Túpac Amaru 450
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="p-4 border-t border-brand-lavender bg-white space-y-2">
+                            <button type="button" onclick="confirmAndSendToWhatsApp()" class="w-full bg-brand-dark hover:bg-brand-accent text-brand-pink font-semibold py-3 px-4 rounded-xl shadow-lg flex items-center justify-center gap-2 text-xs sm:text-sm transition transform active:scale-98 border border-brand-rose/50">
+                                <i data-lucide="send" class="w-4 h-4 text-brand-rose"></i>
+                                <span>Continuar envío del pedido a WhatsApp</span>
+                            </button>
+                            <button type="button" onclick="closePoliciesNotice()" class="w-full text-brand-accent hover:text-brand-dark text-[11px] font-medium py-1">
+                                Volver y editar mi pedido
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- LÓGICA JAVASCRIPT Y BASE DE DATOS -->
+    <script>
+        const LOGO_SIZES = {
+            header: "h-14 sm:h-20 md:h-24",
+            hero:   "h-48 md:h-60",
+            footer: "h-24 md:h-28",
+            cart:   "h-11 sm:h-12"
+        };
+
+        const PASTRY_MOTIVATIONAL_MESSAGE = "“Cada horneado es un abrazo dulce: cree en tus sueños, saborea cada instante y deja que lo artesanal endulce tu camino.”";
+
+        const MAIN_GROUPS_CONFIG = {
+            dulces: {
+                title: "Bocaditos Dulces",
+                subcategories: [
+                    { key: "all", label: "🌸 Todos los Dulces" },
+                    { key: "Brounies y blondies", label: "🍫 Brownies y Blondies" },
+                    { key: "Petit shots", label: "🍨 Petit Shots" },
+                    { key: "Pyes", label: "🥧 Pyes" },
+                    { key: "Trufas y brigadeiros", label: "🍬 Trufas y Brigadeiros" }
+                ]
+            },
+            salados: {
+                title: "Bocaditos Salados",
+                subcategories: [
+                    { key: "all", label: "🌸 Todos los Salados" },
+                    { key: "Canapés", label: "🍤 Canapés" },
+                    { key: "Charcuteria", label: "🧀 Charcutería" },
+                    { key: "Crostini", label: "🥖 Crostini" },
+                    { key: "Empanadas", label: "🥟 Empanadas" },
+                    { key: "Piezas de pollo", label: "🍗 Piezas de Pollo" },
+                    { key: "Rolls", label: "🥐 Rolls" },
+                    { key: "Saabores internacionales", label: "🌎 Sabores Internacionales" },
+                    { key: "Sandwiches", label: "🥪 Sandwiches" }
+                ]
+            },
+            tortas: {
+                title: "Pasteles o Tortas con Diseños",
+                subcategories: [
+                    { key: "all", label: "🌸 Todas las Tortas" },
+                    { key: "Tortas temáticas y celebración", label: "🎉 Tortas Temáticas y Celebración" },
+                    { key: "Tortas de diseño elegante", label: "✨ Tortas de Diseño Elegante" },
+                    { key: "Pasteles personalizados", label: "🎨 Pasteles Personalizados" }
+                ]
+            }
+        };
+
+        const productsData = [
+            // ================= BOCADITOS DULCES =================
+            { id: 1, group: "dulces", name: "Alfajor de Cookies Chips", cat: "Brounies y blondies", desc: "Galletas artesanales con chispas de chocolate rellenas de manjar.", options: [{u: 100, p: 75}, {u: 50, p: 42}, {u: 25, p: 26}], image: "img/Brounies y blondies/Alfajor de cookies chips.png" },
+            { id: 2, group: "dulces", name: "Alfajores de Maicena", cat: "Brounies y blondies", desc: "Suaves galletas artesanales de maicena rellenas con manjar blanco tradicional.", options: [{u: 100, p: 70}, {u: 50, p: 40}, {u: 25, p: 25}], image: "img/Brounies y blondies/Alfajor de maicena.png" },
+            { id: 3, group: "dulces", name: "Alfajor de Yema", cat: "Brounies y blondies", desc: "Clásica masa fina de yema con relleno cremoso tradicional.", options: [{u: 100, p: 75}, {u: 50, p: 42}, {u: 25, p: 26}], image: "img/Brounies y blondies/Alfajor de yema.png" },
+            { id: 4, group: "dulces", name: "Blondies", cat: "Brounies y blondies", desc: "Tierno bizcocho dorado a base de vainilla y manteca artesanal.", options: [{u: 100, p: 70}, {u: 50, p: 40}, {u: 25, p: 25}], image: "img/Brounies y blondies/Blondies.png" },
+            { id: 5, group: "dulces", name: "Brownies Artesanales", cat: "Brounies y blondies", desc: "Clásicos bocaditos de brownie de chocolate intenso con textura suave.", options: [{u: 100, p: 80}, {u: 50, p: 45}, {u: 25, p: 28}], image: "img/Brounies y blondies/Brownie.png" },
+
+            { id: 17, group: "dulces", name: "Banana Fish (Shots)", cat: "Petit shots", desc: "Vasitos cremosos con capas de plátano acaramelado, crema y galleta.", options: [{u: 100, p: 150}, {u: 50, p: 85}, {u: 25, p: 45}], image: "img/Petit shots/Banana fish.png" },
+            { id: 18, group: "dulces", name: "Cheesecake de Fresa (Shots)", cat: "Petit shots", desc: "Base de galleta crujiente, crema de vainilla y mermelada natural de fresa.", options: [{u: 100, p: 150}, {u: 50, p: 85}, {u: 25, p: 45}], image: "img/Petit shots/Cheesecake de fresa.png" },
+            { id: 19, group: "dulces", name: "Cheesecake de Maracuyá (Shots)", cat: "Petit shots", desc: "Vasitos con base de galleta, suave crema y coulis de maracuyá.", options: [{u: 100, p: 150}, {u: 50, p: 85}, {u: 25, p: 45}], image: "img/Petit shots/Cheesecake de maracuyá.png" },
+            { id: 20, group: "dulces", name: "Cheesecake de Piña Colada (Shots)", cat: "Petit shots", desc: "Crema tropical de coco y piña sobre base crocante de galleta.", options: [{u: 100, p: 150}, {u: 50, p: 85}, {u: 25, p: 45}], image: "img/Petit shots/Cheesecake de piña colada.png" },
+            { id: 21, group: "dulces", name: "Chocotorta (Shots)", cat: "Petit shots", desc: "Clásicas capas de galletas de chocolate y crema suave de dulce de leche.", options: [{u: 100, p: 150}, {u: 50, p: 85}, {u: 25, p: 45}], image: "img/Petit shots/Chocotorta.png" },
+            { id: 22, group: "dulces", name: "Mousse de Oreo (Shots)", cat: "Petit shots", desc: "Suave mousse cremoso con trozos de galleta Oreo.", options: [{u: 100, p: 150}, {u: 50, p: 85}, {u: 25, p: 45}], image: "img/Petit shots/Mouse de oreo.png" },
+
+            { id: 26, group: "dulces", name: "Pye de Chocolate", cat: "Pyes", desc: "Base crocante rellena con ganache cremoso de chocolate.", options: [{u: 100, p: 75}, {u: 50, p: 42}, {u: 25, p: 26}], image: "img/Pyes/Pye de chocolate.png" },
+            { id: 27, group: "dulces", name: "Pye de Frutas Mixto", cat: "Pyes", desc: "Tartaleta artesanal con crema pastelera y selección de frutas frescas.", options: [{u: 100, p: 75}, {u: 50, p: 42}, {u: 25, p: 26}], image: "img/Pyes/Pye de frutas mixto.png" },
+            { id: 28, group: "dulces", name: "Pye de Lemonberry", cat: "Pyes", desc: "Combinación equilibrada de crema cítrica de limón y frutos rojos.", options: [{u: 100, p: 75}, {u: 50, p: 42}, {u: 25, p: 26}], image: "img/Pyes/Pye de lemonberry.png" },
+            { id: 29, group: "dulces", name: "Pye de Limón", cat: "Pyes", desc: "Base crocante de galleta, crema de limón ácido y suave merengue italiano.", options: [{u: 100, p: 70}, {u: 50, p: 40}, {u: 25, p: 25}], image: "img/Pyes/Pye de limón.png" },
+            { id: 30, group: "dulces", name: "Pye de Manzana", cat: "Pyes", desc: "Tradicional pye horneado con manzanita especiada con canela.", options: [{u: 100, p: 70}, {u: 50, p: 40}, {u: 25, p: 25}], image: "img/Pyes/Pye de manzana.png" },
+
+            { id: 40, group: "dulces", name: "Brigadeiro de Chocolate", cat: "Trufas y brigadeiros", desc: "Tradicional bocado cremoso de chocolate con chispas finas.", options: [{u: 100, p: 70}, {u: 50, p: 40}, {u: 25, p: 23}], image: "img/Trufas y brigadeiros/Brigadeiro de chocolate.png" },
+            { id: 41, group: "dulces", name: "Brigadeiro de Limón", cat: "Trufas y brigadeiros", desc: "Bocado suave y refrescante con toque cítrico de limón.", options: [{u: 100, p: 70}, {u: 50, p: 40}, {u: 25, p: 23}], image: "img/Trufas y brigadeiros/Brigadeiro de limón.png" },
+            { id: 42, group: "dulces", name: "Crema Volteada", cat: "Trufas y brigadeiros", desc: "Porciones individuales de crema volteada tradicional con caramelo.", options: [{u: 100, p: 95}, {u: 50, p: 52}, {u: 25, p: 30}], image: "img/Trufas y brigadeiros/Crema volteada.png" },
+            { id: 43, group: "dulces", name: "Creme Brulee", cat: "Trufas y brigadeiros", desc: "Crema fina de vainilla con capa crocante de azúcar caramelizada.", options: [{u: 100, p: 110}, {u: 50, p: 60}, {u: 25, p: 35}], image: "img/Trufas y brigadeiros/Creme brulee.png" },
+            { id: 44, group: "dulces", name: "Trufa de Coco", cat: "Trufas y brigadeiros", desc: "Finas trufas de leche condensada cubiertas con coco rallado.", options: [{u: 100, p: 70}, {u: 50, p: 40}, {u: 25, p: 23}], image: "img/Trufas y brigadeiros/Trufa de coco.png" },
+
+            // ================= BOCADITOS SALADOS =================
+            { id: 6, group: "salados", name: "Canapé de Camarón", cat: "Canapés", desc: "Base crocante coronada con crema suave y camarones sazonados.", options: [{u: 100, p: 95}, {u: 50, p: 52}, {u: 25, p: 30}], image: "img/Canapés/Canapé de camarón.png" },
+            { id: 7, group: "salados", name: "Canapé de Pollo", cat: "Canapés", desc: "Tostadita fina con pasta cremosa de pollo deshilachado y especias.", options: [{u: 100, p: 80}, {u: 50, p: 45}, {u: 25, p: 26}], image: "img/Canapés/Canapé de pollo.png" },
+            { id: 8, group: "salados", name: "Canapé de Salchicha Huachana", cat: "Canapés", desc: "Base artesanal con salchicha huachana dorada y toque criollo.", options: [{u: 100, p: 85}, {u: 50, p: 48}, {u: 25, p: 28}], image: "img/Canapés/Canapé de salchicha huachana.png" },
+
+            { id: 9, group: "salados", name: "Charcutería Copa (12 Unidades)", cat: "Charcuteria", desc: "Presentación elegante en copa cristalina con fina charcutería.", options: [{u: 12, p: 120}], image: "img/Charcuteria/Charcuteria copa.png" },
+            { id: 10, group: "salados", name: "Charcutería Shots", cat: "Charcuteria", desc: "Vasitos personales con surtido de embutidos, quesos y frutos secos.", options: [{u: 100, p: 80}, {u: 50, p: 45}, {u: 25, p: 28}], image: "img/Charcuteria/Charcuteria shots.png" },
+            { id: 11, group: "salados", name: "Tabla de Quesos", cat: "Charcuteria", desc: "Selección gourmet de quesos maduros, fiambres, frutas y acompañamientos.", options: [{u: 1, p: 140}], image: "img/Charcuteria/Tabla de quesos.png" },
+
+            { id: 12, group: "salados", name: "Crostini de Camarón", cat: "Crostini", desc: "Pan artesanal tostado con crema especial y camarones salteados.", options: [{u: 100, p: 90}, {u: 50, p: 50}, {u: 25, p: 30}], image: "img/Crostini/Crostini de camarón.png" },
+            { id: 13, group: "salados", name: "Crostini de Cerdo", cat: "Crostini", desc: "Pan crocante horneado cubierto con crocante de cerdo frito.", options: [{u: 100, p: 70}, {u: 50, p: 40}, {u: 25, p: 28}], image: "img/Crostini/Crostini de cerdo.png" },
+            { id: 14, group: "salados", name: "Crostini de Tocino", cat: "Crostini", desc: "Tostadita especial con crema suave y trocitos de tocino.", options: [{u: 100, p: 70}, {u: 50, p: 40}, {u: 25, p: 28}], image: "img/Crostini/Crostini de tocino.png" },
+
+            { id: 15, group: "salados", name: "Empanadas de Carne", cat: "Empanadas", desc: "Relleno criollo de carne picada sazonada con especias.", options: [{u: 100, p: 70}, {u: 50, p: 45}, {u: 25, p: 28}], image: "img/Empanadas/Empanadas de carne.png" },
+            { id: 16, group: "salados", name: "Empanadas de Pollo", cat: "Empanadas", desc: "Masa artesanal rellena de pollo guisado y sazonado en casa.", options: [{u: 100, p: 70}, {u: 50, p: 45}, {u: 25, p: 28}], image: "img/Empanadas/Empanadas de pollo.png" },
+
+            { id: 23, group: "salados", name: "Alitas a la BBQ", cat: "Piezas de pollo", desc: "Piezas doradas con clásica salsa barbacoa ahumada. Incluye crema a elección.", tieneCrema: true, options: [{u: 100, p: 170}, {u: 50, p: 85}, {u: 25, p: 45}], image: "img/Piezas de pollo/Alitas a la BBQ.png" },
+            { id: 24, group: "salados", name: "Alitas de Broster", cat: "Piezas de pollo", desc: "Crujientes piezas de pollo empanizadas al estilo broster. Incluye crema.", tieneCrema: true, options: [{u: 100, p: 170}, {u: 50, p: 85}, {u: 25, p: 45}], image: "img/Piezas de pollo/Alitas de broster.png" },
+            { id: 25, group: "salados", name: "Alitas de Maracuyá", cat: "Piezas de pollo", desc: "Alitas bañadas en reducción dulce de maracuyá. Incluye crema a elección.", tieneCrema: true, options: [{u: 100, p: 170}, {u: 50, p: 85}, {u: 25, p: 45}], image: "img/Piezas de pollo/Alitas de maracuyá.png" },
+
+            { id: 31, group: "salados", name: "Rolls de Jamón y Queso", cat: "Rolls", desc: "Bocaditos de hojaldre crocante con jamón y queso mantecoso.", options: [{u: 100, p: 70}, {u: 50, p: 40}, {u: 25, p: 20}], image: "img/Rolls/Rolls de jamón y queso.png" },
+            { id: 32, group: "salados", name: "Rolls de Salchicha", cat: "Rolls", desc: "Hojaldre dorado enrollado con salchichita cocktail.", options: [{u: 100, p: 70}, {u: 50, p: 40}, {u: 25, p: 20}], image: "img/Rolls/Rolls de salchicha.png" },
+            { id: 33, group: "salados", name: "Tequeños de Chorizo", cat: "Rolls", desc: "Crujientes tequeños rellenos de queso y chorizo artesanal.", options: [{u: 100, p: 80}, {u: 50, p: 45}, {u: 25, p: 25}], image: "img/Rolls/Tequeños de chorizo.png" },
+            { id: 34, group: "salados", name: "Wraps de Pollo y Cheddar", cat: "Rolls", desc: "Rollitos suaves rellenos de pollo sazonado y queso cheddar fundido.", options: [{u: 100, p: 85}, {u: 50, p: 48}, {u: 25, p: 28}], image: "img/Rolls/Wraps de pollo y cheddar.png" },
+
+            { id: 35, group: "salados", name: "Cachapa", cat: "Saabores internacionales", desc: "Mini cachapas de maíz tierno con queso fresco.", options: [{u: 100, p: 90}, {u: 50, p: 50}, {u: 25, p: 30}], image: "img/Saabores internacionales/Cachapa.png" },
+            { id: 36, group: "salados", name: "Empanadas de Queso (Sabor Chileno)", cat: "Saabores internacionales", desc: "Crujientes empanaditas con queso fundido derretido al horno.", options: [{u: 100, p: 80}, {u: 50, p: 45}, {u: 25, p: 28}], image: "img/Saabores internacionales/Empanadas de queso.png" },
+            { id: 37, group: "salados", name: "Reyna Pepeada", cat: "Saabores internacionales", desc: "Mini arepas rellenas con crema de pollo, palta y especias.", options: [{u: 100, p: 90}, {u: 50, p: 50}, {u: 25, p: 30}], image: "img/Saabores internacionales/Reyna pepeada.png" },
+
+            { id: 38, group: "salados", name: "Hamburguesa de Carne", cat: "Sandwiches", desc: "Mini hamburguesas artesanales con carne jugosa y acompañamientos.", options: [{u: 100, p: 110}, {u: 50, p: 60}, {u: 25, p: 35}], image: "img/Sandwiches/Hamburguesa de carne.png" },
+            { id: 39, group: "salados", name: "Sandwiches de Pollo", cat: "Sandwiches", desc: "Suave pan artesanal relleno de pollo deshilachado cremoso.", options: [{u: 100, p: 80}, {u: 50, p: 45}, {u: 25, p: 28}], image: "img/Sandwiches/Sandwiches de pollo.png" },
+
+            // ================= PASTELES O TORTAS CON DISEÑOS =================
+            { id: 45, group: "tortas", name: "Torta Temática Celebración", cat: "Tortas temáticas y celebración", desc: "Torta artesanal decorada según temática de cumpleaños o aniversario (cotización base).", options: [{u: 15, p: 95}, {u: 25, p: 145}, {u: 40, p: 220}], image: "img/Tortas y pasteles/Torta tematica.png" },
+            { id: 46, group: "tortas", name: "Torta Elegante Floral / Buttercream", cat: "Tortas de diseño elegante", desc: "Acabado fino con detalles florales, bordes prolijos y relleno a elección.", options: [{u: 15, p: 105}, {u: 25, p: 155}, {u: 40, p: 235}], image: "img/Tortas y pasteles/Torta elegante.png" },
+            { id: 47, group: "tortas", name: "Pastel Personalizado a Medida", cat: "Pasteles personalizados", desc: "Diseño exclusivo coordinado según paleta de colores, dedicatoria y ocasión.", options: [{u: 15, p: 110}, {u: 25, p: 165}, {u: 40, p: 245}], image: "img/Tortas y pasteles/Pastel personalizado.png" }
+        ];
+
+        const listaCremas = ["Crema de Palta", "Crema de Rocoto", "Pico de Gallo", "Mayonesa Artesanal", "Huasacaca"];
+        const LOCAL_PICKUP_ADDRESS = "📍 Av. Túpac Amaru 450";
+
+        let selectedMainGroup = 'dulces';
+        let selectedCategory = 'all';
+        let selectedPayment = 'Yape';
+        let selectedOptionsState = {};
+        let cart = [];
+        let toastTimeout;
+
+        document.addEventListener('DOMContentLoaded', () => {
+            applyLogoSizes();
+            applyMotivationalMessage();
+
+            productsData.forEach(p => {
+                selectedOptionsState[p.id] = {
+                    units: p.options[0].u,
+                    price: p.options[0].p,
+                    sauce: p.tieneCrema ? listaCremas[0] : null
+                };
+            });
+
+            const dateInput = document.getElementById('delivery-date');
+            const minDate = new Date();
+            minDate.setDate(minDate.getDate() + 2);
+            dateInput.min = minDate.toISOString().split('T')[0];
+            dateInput.value = minDate.toISOString().split('T')[0];
+
+            handleDeliveryMethodChange();
+            renderSubcategoriesBar();
+            renderProducts();
+            updateCartUI();
+            lucide.createIcons();
+        });
+
+        function handleDeliveryMethodChange() {
+            const method = document.getElementById('delivery-method').value;
+            const localBox = document.getElementById('local-pickup-box');
+            const deliveryBox = document.getElementById('delivery-address-box');
+            const addressInput = document.getElementById('delivery-address');
+
+            if (method === 'Retiro en Local') {
+                localBox.classList.remove('hidden');
+                deliveryBox.classList.add('hidden');
+                addressInput.value = LOCAL_PICKUP_ADDRESS;
+            } else {
+                localBox.classList.add('hidden');
+                deliveryBox.classList.remove('hidden');
+                if (addressInput.value.trim() === LOCAL_PICKUP_ADDRESS) {
+                    addressInput.value = "";
+                }
+            }
+            lucide.createIcons();
+        }
+
+        function applyLogoSizes() {
+            const map = {
+                "logo-header": LOGO_SIZES.header,
+                "logo-hero":   LOGO_SIZES.hero,
+                "logo-footer": LOGO_SIZES.footer,
+                "logo-cart":   LOGO_SIZES.cart
+            };
+            Object.entries(map).forEach(([id, sizeClasses]) => {
+                const el = document.getElementById(id);
+                if (!el) return;
+                el.className = el.className
+                    .split(" ")
+                    .filter(cls => !/^(sm:|md:)?h-/.test(cls))
+                    .concat(sizeClasses.split(" "))
+                    .join(" ");
+            });
+        }
+
+        function applyMotivationalMessage() {
+            const quoteEl = document.getElementById("pastry-motivational-text");
+            if (quoteEl && PASTRY_MOTIVATIONAL_MESSAGE) {
+                quoteEl.textContent = PASTRY_MOTIVATIONAL_MESSAGE;
+            }
+        }
+
+        function showToast(productName) {
+            const toast = document.getElementById('toast-notification');
+            const toastText = document.getElementById('toast-text');
+            toastText.textContent = `Agregado: ${productName}`;
+            
+            toast.classList.remove('opacity-0', 'translate-y-3');
+            toast.classList.add('opacity-100', 'translate-y-0');
+
+            clearTimeout(toastTimeout);
+            toastTimeout = setTimeout(() => {
+                toast.classList.remove('opacity-100', 'translate-y-0');
+                toast.classList.add('opacity-0', 'translate-y-3');
+            }, 2200);
+        }
+
+        function selectMainGroup(groupKey) {
+            selectedMainGroup = groupKey;
+            selectedCategory = 'all';
+
+            document.querySelectorAll('.main-box-card').forEach(card => {
+                const isSelected = card.dataset.group === groupKey;
+                card.classList.toggle('active', isSelected);
+                card.classList.toggle('border-brand-rose/70', isSelected);
+                card.classList.toggle('border-brand-lavender', !isSelected);
+            });
+
+            renderSubcategoriesBar();
+            renderProducts();
+        }
+
+        function renderSubcategoriesBar() {
+            const groupCfg = MAIN_GROUPS_CONFIG[selectedMainGroup];
+            document.getElementById('active-group-title').textContent = groupCfg.title;
+
+            const bar = document.getElementById('subcategories-bar');
+            bar.innerHTML = groupCfg.subcategories.map(sub => {
+                const isActive = selectedCategory === sub.key;
+                return `
+                    <button
+                        type="button"
+                        onclick="setCategory('${sub.key}')"
+                        class="cat-tab px-3.5 py-1.5 rounded-full text-xs font-semibold whitespace-nowrap transition ${
+                            isActive
+                                ? 'bg-brand-dark text-brand-pink shadow-sm border border-brand-rose/50'
+                                : 'bg-brand-cream text-brand-dark border border-brand-lavender hover:border-brand-rose'
+                        }"
+                    >
+                        ${sub.label}
+                    </button>
+                `;
+            }).join('');
+        }
+
+        function setCategory(cat) {
+            selectedCategory = cat;
+            renderSubcategoriesBar();
+            renderProducts();
+        }
+
+        function filterProducts() {
+            renderProducts();
+        }
+
+        function selectPaymentMethod(method) {
+            selectedPayment = method;
+            document.querySelectorAll('.payment-btn').forEach(btn => {
+                if (btn.dataset.pay === method) {
+                    btn.className = "payment-btn active border rounded-xl p-2 flex flex-col items-center justify-center gap-1 transition";
+                } else {
+                    btn.className = "payment-btn bg-white text-brand-dark border border-brand-lavender rounded-xl p-2 flex flex-col items-center justify-center gap-1 transition hover:border-brand-rose";
+                }
+            });
+        }
+
+        function renderProducts() {
+            const grid = document.getElementById('products-grid');
+            const searchVal = document.getElementById('search-input').value.toLowerCase().trim();
+
+            const filtered = productsData.filter(p => {
+                const matchGroup = p.group === selectedMainGroup;
+                const matchCategory = selectedCategory === 'all' || p.cat === selectedCategory;
+                const matchSearch = !searchVal ||
+                    p.name.toLowerCase().includes(searchVal) ||
+                    p.desc.toLowerCase().includes(searchVal) ||
+                    p.cat.toLowerCase().includes(searchVal);
+                return matchGroup && matchCategory && matchSearch;
+            });
+
+            if (filtered.length === 0) {
+                grid.innerHTML = `
+                    <div class="col-span-full text-center py-12 text-brand-accent">
+                        <span class="text-4xl mb-2 block">✨</span>
+                        <p class="text-sm">No se encontraron productos en esta selección.</p>
+                    </div>
+                `;
+                lucide.createIcons();
+                return;
+            }
+
+            grid.innerHTML = filtered.map(p => {
+                const currentState = selectedOptionsState[p.id];
+                const labelCat = p.cat === 'Saabores internacionales' ? 'Sabores internacionales' : p.cat;
+                const safeImageSrc = encodeURI(p.image);
+                
+                return `
+                    <div class="bg-white rounded-2xl border border-brand-lavender shadow-sm card-dragonfly-hover transition duration-300 overflow-hidden flex flex-col justify-between">
+                        <div>
+                            <div class="relative h-32 overflow-hidden bg-brand-pink/50 p-2 flex items-center justify-center">
+                                <img src="${safeImageSrc}" alt="${p.name}" onerror="this.onerror=null;this.src='img/Logo/Logo-moli.png';" class="max-h-full max-w-full object-contain hover:scale-105 transition duration-500 rounded-lg">
+                                <span class="absolute top-2 left-2 bg-white/95 backdrop-blur-sm text-[10px] font-bold px-2.5 py-0.5 rounded-full uppercase tracking-wider text-brand-dark shadow-sm border border-brand-rose/40">
+                                    ✨ ${labelCat}
+                                </span>
+                            </div>
+
+                            <div class="p-4">
+                                <h3 class="font-serif text-xl font-bold text-brand-dark mb-1">${p.name}</h3>
+                                <p class="text-xs text-brand-accent leading-relaxed mb-4 line-clamp-2">${p.desc}</p>
+
+                                <div class="mb-4">
+                                    <label class="block text-[11px] font-semibold text-brand-accent uppercase tracking-wider mb-2">
+                                        ${p.group === 'tortas' ? 'Seleccionar Tamaño / Porciones:' : 'Seleccionar Porción:'}
+                                    </label>
+                                    <div class="grid grid-cols-3 gap-1.5">
+                                        ${p.options.map(opt => `
+                                            <button 
+                                                type="button"
+                                                onclick="selectPortion(${p.id}, ${opt.u}, ${opt.p})"
+                                                class="portion-btn portion-btn-${p.id}-${opt.u} px-2 py-1.5 rounded-lg border text-xs font-semibold flex flex-col items-center justify-center transition ${currentState.units === opt.u ? 'active' : 'border-brand-lavender text-brand-dark hover:border-brand-rose'}"
+                                            >
+                                                <span>${opt.u} ${p.group === 'tortas' ? 'porc.' : 'u'}</span>
+                                                <span class="text-[10px] opacity-80">S/ ${opt.p.toFixed(2)}</span>
+                                            </button>
+                                        `).join('')}
+                                    </div>
+                                </div>
+
+                                ${p.tieneCrema ? `
+                                    <div class="mb-4 bg-brand-pink/55 p-2.5 rounded-xl border border-brand-rose/40">
+                                        <label class="block text-[11px] font-semibold text-brand-dark mb-1">Crema Acompañante:</label>
+                                        <select onchange="selectSauce(${p.id}, this.value)" class="w-full text-xs p-1.5 rounded-lg border border-brand-lavender bg-white text-brand-dark focus:outline-none">
+                                            ${listaCremas.map(s => `<option value="${s}" ${currentState.sauce === s ? 'selected' : ''}>${s}</option>`).join('')}
+                                        </select>
+                                    </div>
+                                ` : ''}
+                            </div>
+                        </div>
+
+                        <div class="p-4 pt-0 mt-auto flex items-center justify-between border-t border-brand-pink pt-3">
+                            <div>
+                                <span class="text-[10px] text-brand-accent block">Precio Porción</span>
+                                <span class="font-serif text-2xl font-bold text-brand-rose">S/ ${currentState.price.toFixed(2)}</span>
+                            </div>
+
+                            <button type="button" onclick="addToCart(${p.id})" class="bg-brand-dark hover:bg-brand-accent text-brand-pink px-4 py-2 rounded-xl text-xs font-semibold flex items-center gap-1.5 shadow transition transform active:scale-95 border border-brand-rose/40">
+                                <i data-lucide="plus" class="w-4 h-4 text-brand-rose"></i>
+                                <span>Agregar</span>
+                            </button>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+
+            lucide.createIcons();
+        }
+
+        function selectPortion(productId, units, price) {
+            selectedOptionsState[productId].units = units;
+            selectedOptionsState[productId].price = price;
+            renderProducts();
+        }
+
+        function selectSauce(productId, sauce) {
+            selectedOptionsState[productId].sauce = sauce;
+        }
+
+        function addToCart(productId) {
+            const product = productsData.find(p => p.id === productId);
+            const state = selectedOptionsState[productId];
+
+            const cartItemKey = `${productId}-${state.units}-${state.sauce || 'sincrema'}`;
+            const existingIndex = cart.findIndex(item => item.key === cartItemKey);
+
+            if (existingIndex > -1) {
+                cart[existingIndex].qty += 1;
+            } else {
+                cart.push({
+                    key: cartItemKey,
+                    id: product.id,
+                    name: product.name,
+                    units: state.units,
+                    unitPrice: state.price,
+                    sauce: state.sauce,
+                    qty: 1
+                });
+            }
+
+            updateCartUI();
+            showToast(`${product.name} (${state.units}u)`);
+        }
+
+        function updateCartQty(key, delta) {
+            const index = cart.findIndex(item => item.key === key);
+            if (index > -1) {
+                cart[index].qty += delta;
+                if (cart[index].qty <= 0) {
+                    cart.splice(index, 1);
+                }
+            }
+            updateCartUI();
+        }
+
+        function updateCartUI() {
+            const container = document.getElementById('cart-items-container');
+            const countLabel = document.getElementById('cart-items-count-label');
+            const totalBadge = document.getElementById('cart-badge');
+            const mobileBadge = document.getElementById('mobile-cart-badge');
+            const floatingBtn = document.getElementById('floating-cart-btn');
+            const totalEl = document.getElementById('cart-total');
+            const mobileTotalEl = document.getElementById('mobile-cart-total');
+
+            const totalItems = cart.reduce((sum, item) => sum + item.qty, 0);
+            const grandTotal = cart.reduce((sum, item) => sum + (item.unitPrice * item.qty), 0);
+
+            if (countLabel) {
+                countLabel.textContent = `${totalItems} ${totalItems === 1 ? 'ítem' : 'ítems'}`;
+            }
+
+            if (totalItems > 0) {
+                totalBadge.textContent = totalItems;
+                totalBadge.classList.remove('hidden');
+                mobileBadge.textContent = totalItems;
+                floatingBtn.classList.remove('hidden');
+            } else {
+                totalBadge.classList.add('hidden');
+                floatingBtn.classList.add('hidden');
+            }
+
+            if (cart.length === 0) {
+                container.innerHTML = `
+                    <div class="text-center py-12 text-brand-accent">
+                        <span class="text-4xl mb-2 block opacity-50">✨</span>
+                        <p class="text-sm">Tu pedido está vacío actualmente.</p>
+                    </div>
+                `;
+            } else {
+                container.innerHTML = cart.map(item => `
+                    <div class="bg-brand-pink/35 p-3 rounded-xl border border-brand-lavender flex items-center justify-between gap-2">
+                        <div class="flex-1 min-w-0">
+                            <h4 class="font-semibold text-sm text-brand-dark truncate">${item.name}</h4>
+                            <div class="text-xs text-brand-accent">
+                                <span>Porción: ${item.units} u (S/ ${item.unitPrice.toFixed(2)})</span>
+                                ${item.sauce ? `<span class="block text-brand-dark font-medium">• Crema: ${item.sauce}</span>` : ''}
+                            </div>
+                            <span class="text-sm font-bold text-brand-dark mt-1 block">S/ ${(item.unitPrice * item.qty).toFixed(2)}</span>
+                        </div>
+
+                        <div class="flex items-center gap-1.5 bg-white border border-brand-lavender rounded-lg p-1 shadow-sm shrink-0">
+                            <button type="button" onclick="updateCartQty('${item.key}', -1)" class="w-6 h-6 rounded flex items-center justify-center text-brand-dark hover:bg-brand-pink font-bold">-</button>
+                            <span class="text-xs font-bold w-4 text-center text-brand-dark">${item.qty}</span>
+                            <button type="button" onclick="updateCartQty('${item.key}', 1)" class="w-6 h-6 rounded flex items-center justify-center text-brand-dark hover:bg-brand-pink font-bold">+</button>
+                        </div>
+                    </div>
+                `).join('');
+            }
+
+            totalEl.textContent = `S/ ${grandTotal.toFixed(2)}`;
+            mobileTotalEl.textContent = `S/ ${grandTotal.toFixed(2)}`;
+            lucide.createIcons();
+        }
+
+        function toggleCart(forceOpen = false) {
+            const drawer = document.getElementById('cart-drawer');
+            closePoliciesNotice();
+            if (forceOpen) {
+                drawer.classList.remove('hidden');
+            } else {
+                drawer.classList.toggle('hidden');
+            }
+            handleDeliveryMethodChange();
+            lucide.createIcons();
+        }
+
+        function openPoliciesNotice() {
+            if (cart.length === 0) {
+                alert("Por favor, agrega al menos un producto al pedido.");
+                return;
+            }
+
+            const name = document.getElementById('customer-name').value.trim();
+            const time = document.getElementById('delivery-time').value;
+            const method = document.getElementById('delivery-method').value;
+            const address = document.getElementById('delivery-address').value.trim();
+
+            if (!name) {
+                alert("Por favor ingresa tu nombre y apellido para el registro.");
+                document.getElementById('customer-name').focus();
+                return;
+            }
+
+            if (!time) {
+                alert("Por favor selecciona la hora en que deseas tu pedido.");
+                document.getElementById('delivery-time').focus();
+                return;
+            }
+
+            if (method === 'Delivery' && !address) {
+                alert("Por favor ingresa la dirección de entrega en Bambamarca.");
+                document.getElementById('delivery-address').focus();
+                return;
+            }
+
+            document.getElementById('policies-notice-modal').classList.remove('hidden');
+            lucide.createIcons();
+        }
+
+        function closePoliciesNotice() {
+            const modal = document.getElementById('policies-notice-modal');
+            if (modal) modal.classList.add('hidden');
+        }
+
+        function formatTime12h(time24, period) {
+            if (!time24) return "";
+            const [hourStr, minStr] = time24.split(':');
+            let hour = parseInt(hourStr, 10);
+            if (hour === 0) hour = 12;
+            if (hour > 12) hour = hour - 12;
+            return `${hour}:${minStr} ${period || ''}`.trim();
+        }
+
+        function confirmAndSendToWhatsApp() {
+            const name = document.getElementById('customer-name').value.trim();
+            const date = document.getElementById('delivery-date').value;
+            const time = document.getElementById('delivery-time').value;
+            const period = document.getElementById('delivery-period').value;
+            const method = document.getElementById('delivery-method').value;
+            const addressInputVal = document.getElementById('delivery-address').value.trim();
+            const address = method === 'Retiro en Local' ? LOCAL_PICKUP_ADDRESS : addressInputVal;
+            const notes = document.getElementById('order-notes').value.trim();
+
+            const grandTotal = cart.reduce((sum, item) => sum + (item.unitPrice * item.qty), 0);
+            const formattedTime = formatTime12h(time, period);
+
+            const eSparkle = "\u2728";
+            const eCupcake = "\uD83E\uDDC1";
+            const eUser = "\uD83D\uDC64";
+            const eCal = "\uD83D\uDCC5";
+            const eClock = "\u23F0";
+            const eCar = "\uD83D\uDE97";
+            const ePin = "\uD83D\uDCCD";
+            const eCard = "\uD83D\uDCB3";
+            const eNote = "\uD83D\uDCDD";
+            const eMoney = "\uD83D\uDCB0";
+
+            let message = `*¡HOLA MOLINENDO! DESEO AGENDAR UN PEDIDO* ${eSparkle}${eCupcake}\n\n`;
+            message += `${eUser} *Cliente:* ${name}\n`;
+            message += `${eCal} *Fecha requerida:* ${date}\n`;
+            message += `${eClock} *Hora requerida:* ${formattedTime}\n`;
+            message += `${eCar} *Modalidad:* ${method}\n`;
+            message += `${ePin} *Dirección / Destino:* ${address}\n`;
+            message += `${eCard} *Método de pago:* ${selectedPayment}\n`;
+            if (notes) message += `${eNote} *Indicaciones:* ${notes}\n`;
+            message += `\n*RESUMEN DE PRODUCTOS:*\n`;
+
+            cart.forEach((item, index) => {
+                message += `${index + 1}. *${item.name}* (${item.units}u x ${item.qty} paquete(s))\n`;
+                if (item.sauce) message += `   └ Crema: ${item.sauce}\n`;
+                message += `   Subtotal: S/ ${(item.unitPrice * item.qty).toFixed(2)}\n`;
+            });
+
+            message += `\n${eMoney} *TOTAL ESTIMADO: S/ ${grandTotal.toFixed(2)}*\n\n`;
+            message += `Quedo a la espera de los datos de ${selectedPayment} a nombre de Vivian Mishel Chugden Mori para realizar el abono del 50% y confirmar la reserva. ¡Muchas gracias!`;
+
+            const phone = "51918464866";
+            const encodedUrl = `https://api.whatsapp.com/send?phone=${phone}&text=${encodeURIComponent(message)}`;
+            closePoliciesNotice();
+            window.open(encodedUrl, '_blank');
+        }
+    </script>
+</body>
+</html>
